@@ -1,0 +1,408 @@
+.popup-chat .pc-top {
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3); }
+
+.popup-chat {
+  border-radius: 15px 15px 0 0; }
+
+.popup-chat .cr-bottom .crb-textarea-wrap {
+  background: #fff;
+  border: 0px; }
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  color: #4a4a4a;
+  display: block;
+  /* For Firefox */ }
+
+.popup-chat .cr-bottom .crb-button.crb-send:before {
+  background-image: url("../images/send-popup.png");
+  width: 30px;
+  height: 26px;
+  background-size: 29px 25px; }
+
+.popup-chat .cr-bottom .crb-button.crb-emoji:before {
+  background-image: url("../images/emoji-popup.png");
+  width: 26px;
+  height: 26px;
+  background-size: 25px 25px; }
+
+.popup-chat .cr-bottom .crb-button.crb-attach {
+  left: auto;
+  right: 44px; }
+.popup-chat .cr-bottom .crb-button.crb-attach:before {
+  background-image: url("../images/attach-popup.png");
+  background-size: 23px 25px; }
+
+.popup-chat .cr-bottom .crb-textarea-wrap {
+  margin: 0 88px 0 34px; }
+
+.pc-top-name .user-avatar {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  border-radius: 50%;
+  overflow: hidden; }
+.pc-top-name .user-avatar img {
+  max-width: 100%; }
+
+.pc-top-name .ctr-all {
+  display: inline-block;
+  vertical-align: middle; }
+
+.pc-top-name .crt-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #fff; }
+
+.pc-top-name .crt-category {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff; }
+
+.popup-chat .file-list .file-item {
+  background: transparent;
+  border: 1px solid #a4a4a4; }
+.popup-chat .file-list .file-item span {
+  font-family: "Open Sans", sans-serif;
+  color: #4a4a4a;
+  font-weight: normal;
+  line-height: 21px; }
+.popup-chat .file-list .file-item .file-delete {
+  background-image: url(../images/del-ico-dark.png); }
+
+.cs-message-wrap {
+  margin-bottom: 20px; }
+.cs-message-wrap .cs-message-top {
+  padding: 15px 0;
+  position: relative; }
+@media (max-width: 700px) {
+  .cs-message-wrap .cs-message-top {
+    padding-top: 30px; } }
+.cs-message-wrap .cs-message-top .user-block {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; }
+.cs-message-wrap .cs-message-top .user-block .user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -24px; }
+.cs-message-wrap .cs-message-top .user-block .user-avatar img {
+  display: block;
+  max-width: 100%; }
+.cs-message-wrap .cs-message-top .user-block .user-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: #17287a;
+  font-weight: bold;
+  display: block;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  line-height: 1em; }
+.cs-message-wrap .cs-message-top .user-block .user-name.no-category {
+  padding: 8px 0; }
+.cs-message-wrap .cs-message-top .user-block .user-category {
+  font-size: 12px;
+  letter-spacing: 0.025em;
+  line-height: 1em;
+  color: #acb2d0; }
+.cs-message-wrap .cs-message-top .cs-mesage-time {
+  display: inline-block;
+  font-size: 12px;
+  color: #acb2d0;
+  vertical-align: top;
+  margin-left: 15px; }
+@media (max-width: 700px) {
+  .cs-message-wrap .cs-message-top .cs-mesage-time {
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    font-size: 10px; } }
+.cs-message-wrap .cs-message-text {
+  font-size: 14px;
+  color: #505983;
+  line-height: 1.3em;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+  background: #e9ecf3;
+  padding: 15px;
+  border-radius: 30px; }
+.cs-message-wrap .cs-attached {
+  display: inline-block;
+  font-weight: bold;
+  color: #537ce5;
+  padding-left: 25px;
+  position: relative;
+  line-height: 20px;
+  opacity: .8; }
+.cs-message-wrap .cs-attached:hover {
+  opacity: 1; }
+.cs-message-wrap .cs-attached:before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  top: -2px;
+  width: 18px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../images/attached-ico.png"); }
+
+
+.chat-wrap {
+  background-color: #f9f8fc;
+  border: 0px; }
+.chat-wrap .chat-right .cr-top {
+  background-color: #fff;
+  padding: 7px 25px;
+  border: 0px;
+  border: 1px solid #cecece;
+  border-radius: 4px 4px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+.chat-wrap .chat-right .cr-top .crt-name {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #00247d !important; }
+@media (max-width: 600px) {
+  .chat-wrap .chat-right .cr-top .crt-name {
+    font-size: 16px; } }
+.chat-wrap .chat-right .cr-top .crt-category {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #2c2c2c; }
+@media (max-width: 600px) {
+  .chat-wrap .chat-right .cr-top .crt-category {
+    font-size: 12px; } }
+.chat-wrap .chat-right .cr-top .crt-status {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #00247d;
+  text-transform: uppercase;
+  font-size: 18px; }
+@media (max-width: 600px) {
+  .chat-wrap .chat-right .cr-top .crt-status {
+    font-size: 16px; } }
+.chat-wrap .chat-right .chat-body {
+  color: transparent;
+  border: 1px solid #cecece;
+  border-top: 0px;
+  border-bottom: 0px; }
+.chat-wrap .chat-right .cr-bottom {
+  border: 1px solid #cecece; }
+.chat-wrap .chat-right .cr-bottom .crb-textarea-wrap {
+  border-color: #cecece;
+  border-left: 0; }
+.chat-wrap .chat-right .cr-bottom .crb-textarea {
+  font-size: 14px;
+  color: #2c2c2c;
+  min-height: 50px;
+  padding: 15px; }
+
+@media (max-width: 600px) {
+  .chat-wrap .chat-right .cr-top .user-avatar {
+    display: none; } }
+
+.file-list.chat-file-list {
+  border: 0px; }
+
+.cs-time-divider {
+  text-align: center; }
+.cs-time-divider:before {
+  display: none; }
+.cs-time-divider span {
+  display: inline-block;
+  background: #f3f3f3;
+  min-width: 120px;
+  padding: 0 5px;
+  line-height: 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #4a4a4a; }
+
+/* General CSS Setup */
+/* CSS talk bubble */
+.talk-bubble {
+  position: relative; }
+.talk-bubble.left {
+  background: #ffffff; }
+.talk-bubble.right {
+  background: #d1daff; }
+
+.border {
+  border: 1px solid #cecece; }
+
+.round {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px; }
+
+/* Right triangle placed top left flush. */
+.tri-right.border.left-top:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -23px;
+  right: auto;
+  top: -1px;
+  bottom: auto;
+  border: 23px solid;
+  border-color: #cecece transparent transparent transparent; }
+
+.tri-right.left-top:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -21px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: #fff transparent transparent transparent; }
+
+/* Right triangle placed top right flush. */
+.tri-right.border.right-top:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -24px;
+  top: -1px;
+  bottom: auto;
+  border: 24px solid;
+  border-color: #cecece transparent transparent transparent; }
+
+.tri-right.right-top:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -21px;
+  top: 0px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: #d1daff transparent transparent transparent; }
+
+.cs-message-wrap .cs-message-text {
+  border-radius: 8px;
+  font-size: 16px;
+  color: #2c2c2c;
+  padding-bottom: 30px; }
+@media (max-width: 700px) {
+  .cs-message-wrap .cs-message-text {
+    font-size: 14px; } }
+@media (max-width: 600px) {
+  .cs-message-wrap .cs-message-text {
+    margin-left: 0;
+    margin-right: 0 !important; }
+  .cs-message-wrap .cs-message-text:before, .cs-message-wrap .cs-message-text:after {
+    display: none; } }
+.cs-message-wrap .cs-message-text .assistant-name {
+  color: #00247d;
+  font-weight: 600;
+  display: block; }
+
+.cs-message-wrap.right {
+  text-align: right; }
+
+.cs-message-text.right {
+  margin-left: 0;
+  margin-right: 20px; }
+
+.cs-message-time {
+  position: absolute;
+  font-size: 14px;
+  color: #4a4a4a;
+  bottom: 7px;
+  right: 10px; }
+@media (max-width: 700px) {
+  .cs-message-time {
+    font-size: 12px; } }
+
+.file-list.chat-file-list .file-item {
+  background: transparent;
+  border: 1px solid #a4a4a4; }
+.file-list.chat-file-list .file-item span {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 30px; }
+.file-list.chat-file-list .file-item .file-delete {
+  background-image: url("../images/del-ico-dark.png"); }
+.chat-wrap.full-chat.no-sidebar {
+  max-width: none; }
+
+.chat-wrap .chat-right .cr-bottom {
+  background: #fff; }
+
+.chat-wrap .chat-right .cr-bottom .crb-button {
+  width: 50px; }
+
+.chat-wrap .chat-right .cr-bottom .crb-textarea-wrap {
+  margin: 0 100px 0 50px; }
+@media (max-width: 1024px) {
+  .chat-wrap .chat-right .cr-bottom .crb-textarea-wrap {
+    margin: 0 88px 0 44px; } }
+
+.chat-wrap .chat-right .cr-bottom .crb-button.crb-send {
+  background-color: #00247d;
+  box-shadow: 0 0 0 1px #00247d; }
+.chat-wrap .chat-right .cr-bottom .crb-button.crb-send:hover {
+  background-color: #001d66;
+  box-shadow: 0 0 0 1px #001d66; }
+
+.chat-wrap .chat-right .cr-bottom .crb-button.crb-attach {
+  left: auto;
+  right: 50px; }
+@media (max-width: 1024px) {
+  .chat-wrap .chat-right .cr-bottom .crb-button.crb-attach {
+    right: 44px; } }
+
+.chat-wrap .chat-right .cr-bottom .crb-button.crb-send:before {
+  width: 30px;
+  height: 26px;
+  background-image: url("../images/messageicon.png");
+  opacity: 1; }
+
+.chat-wrap .chat-right .cr-bottom .crb-button.crb-attach:before {
+  background-image: url("../images/fileiconmessage.png");
+  width: 24px;
+  height: 26px; }
+
+.chat-wrap .chat-right .cr-bottom .crb-button.crb-smile:before {
+  background-image: url("../images/emojiicon.png");
+  width: 26px;
+  height: 26px;
+  background-size: 25px 25px; }
+
+@media (max-width: 1024px) {
+  .chat-wrap.full-chat .cr-bottom .crb-button {
+    width: 44px; } }
+

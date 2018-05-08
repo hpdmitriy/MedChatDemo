@@ -1,0 +1,163 @@
+@import "../libs/tw-20-emoji.min.css";
+.fade-enter {
+  opacity: 0.5;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+.fade-appear {
+  opacity: 0.5;
+}
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.5;
+  transition: opacity 1000ms ease-in;
+}
+@media (min-width: 992px) {
+  #chatButton {
+    width: 100px;
+    height: 100px;
+    bottom: 65px;
+    right: 45px;
+  }
+}
+
+.popup-chat .pc-conversation {
+  min-height: 100px;
+}
+.uploader-rules {
+  padding-top:5px;
+  padding-left:10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  color: #4a4a4a;
+  background: white;
+  text-align: right;
+}
+#chat-root .cl-assistant .unread {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  top: auto;
+  bottom: 5px;
+  right: 5px
+}
+#chat-root .chat-left {
+  padding-bottom: 40px;
+}
+#chat-root .dialogs-admin-tools {
+  background: lightgray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  padding: 5px 25px;
+  text-align: center;
+  z-index:1040;
+  /*
+  -webkit-transition: top ease 0.3s;
+  -moz-transition: top ease 0.3s;
+  -ms-transition: top ease 0.3s;
+  -o-transition: top ease 0.3s;
+  transition: top ease 0.3s;
+  */
+}
+#chat-root .assistant-chat .chat-hamburger, #chat-root .assistant-chat .chat-dialog-close {
+  border-color: #00247d;
+  margin-left: 30px;
+}
+#chat-root .assistant-chat .chat-hamburger span, #chat-root .assistant-chat .chat-dialog-close span {
+  background-color: #00247d;
+}
+#chat-root .assistant-chat .chat-hamburger span::before,
+#chat-root .assistant-chat .chat-hamburger span::after,
+#chat-root .assistant-chat .chat-dialog-close::before,
+#chat-root .assistant-chat .chat-dialog-close::after {
+  background-color: #00247d;
+}
+#chat-root .statusWrap {
+  display: flex;
+  align-items: center;
+}
+#chat-root .full-chat .cs-message-text {
+  min-width: 120px;
+}
+#chat-root .popup-chat .cs-attached {
+  font-size:0.9em;
+}
+#chat-root .popup-chat  .cs-message-text {
+  font-size: 14px;
+}
+#chat-root .crb-button.crb-send[disabled]:before {
+  width: 30px;
+  height: 30px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzgiIGhlaWdodD0iMzgiIHZpZXdCb3g9IjAgMCAzOCAzOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHJva2U9IiM0YTRhNGEiPiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSIgc3Ryb2tlLXdpZHRoPSIyIj4gICAgICA8Y2lyY2xlIHN0cm9rZS1vcGFjaXR5PSIuNSIgY3g9IjE4IiBjeT0iMTgiIHI9IjE4Ii8+ICAgICAgPHBhdGggZD0iTTM2IDE4YzAtOS45NC04LjA2LTE4LTE4LTE4Ij4gICAgICAgIDxhbmltYXRlVHJhbnNmb3JtICAgICAgICAgIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgICAgICAgICAgdHlwZT0icm90YXRlIiAgICAgICAgICBmcm9tPSIwIDE4IDE4IiAgICAgICAgICB0bz0iMzYwIDE4IDE4IiAgICAgICAgICBkdXI9IjFzIiAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPiAgICAgIDwvcGF0aD4gICAgPC9nPiAgPC9nPjwvc3ZnPg==);
+  background-size: contain;
+  background-position: center  center;
+}
+#chat-root #EmojiList {
+  width: 200px;
+  height: 205px;
+  position: absolute;
+  left: -1px;
+  top: -205px;
+  z-index: 10;
+  background: white;
+  border: solid 1px lightgray;
+  padding: 2px;
+}
+#chat-root #EmojiList > div{
+  cursor: pointer;
+  margin: 2px;
+}
+#chat-root .cs-message-text .tw {
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+#chat-root .cs-message-text .tw + .tw {
+  margin-left: 0;
+}
+#chat-root .popup-chat:not(.closed)  {
+  bottom: 6em
+}
+@media (min-width: 992px) {
+  #chat-root .popup-chat:not(.closed)  {
+    bottom: 13em
+  }
+}
+#chat-root .chat-button.chatIsOpen {
+  background: #638cf9;
+  border-radius: 50%;
+  text-align: center;
+}
+
+#chat-root .chat-button.chatIsOpen:before{
+  display: block;
+  content: "\00d7";
+  color: white;
+  font-size: 55px;
+  line-height: 60px;
+}
+@media (min-width: 992px) {
+  #chat-root .chat-button.chatIsOpen:before{
+    font-size: 85px;
+    line-height: 95px;
+  }
+}
+#chat-root .chat-button:not(.chatIsOpen) span {
+  display: none;
+}
+

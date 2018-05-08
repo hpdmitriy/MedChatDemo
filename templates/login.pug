@@ -1,0 +1,87 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    link(rel='icon', href='images/favicon.png', type='image/x-icon')
+    meta(name='viewport', content='width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&subset=cyrillic', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&subset=cyrillic', rel='stylesheet')
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/bootstrap-theme.css', rel='stylesheet')
+    link(href='css/bootstrap-select.min.css', rel='stylesheet')
+    // <link href="css/slick-theme.css" rel="stylesheet">
+    link(href='css/jquery.fancybox.css', rel='stylesheet')
+    link(href='css/selectric.css', rel='stylesheet')
+    link(href='css/jquery-ui.min.css', rel='stylesheet')
+    link(href='css/jquery-ui.structure.min.css', rel='stylesheet')
+    link(href='css/jquery-ui.theme.min.css', rel='stylesheet')
+    link(href='css/main.css', rel='stylesheet')
+  body
+    .login-wrap
+      .login-content
+        .container
+          h1 #{user}
+          a.login-logo(href='')
+          form#form.login-form
+            .form-caption
+              | Login
+            .form-group
+              input.form-control(type='text', placeholder='Username', name='name')
+            .form-group
+              input.form-control(type='password', placeholder='Password', name='password')
+            .form-group.clearfix(style="margin-bottom:20px")
+              .col-xs-6.text-center
+                .qmi-radio
+                  input#SignIn.radio-input(type='radio', checked, value="1", name="sign")
+                  label.radio-label(for='SignIn')
+                    | Sign In
+              .col-xs-6.text-center
+                .qmi-radio
+                  input#SignUp.radio-input(type='radio', value="2", name="sign")
+                  label.radio-label(for='SignUp')
+                    | Sign Up
+            .form-group.text-center
+              input#anonymous(type='checkbox' name='anonymous')
+              label(for='anonymous', style="display: inline-block; text-align: left")
+                | Sign In as anonymous
+            .submit-wrap
+              input(type='submit', value='CONTINUE')
+            .forgot-block
+              //a(href='') Sign in as anonymous
+          .login-copy
+            p © 2017 MedEssentially Limited
+    script(src='js/fetch.js')
+    script.
+      var loginForm = document.getElementById('form');
+      loginForm.onsubmit = function (e) {
+        e.preventDefault();
+        fetch('/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: loginForm.querySelector('[name=name]').value,
+            password: loginForm.querySelector('[name=password]').value,
+            sign: loginForm.querySelector('[name=sign]:checked').value,
+            anonymous: loginForm.querySelector('[name=anonymous]').checked
+          })
+        }).then(function (response) {
+          if(response.status === 200) {
+            return response.json()
+          }
+          throw new Error(`Error: ${response.status},\n ${response.statusText}`);
+        }).then(function (json) {
+          if(json.errors){
+            throw new Error(`Error: ${json.name},\n ${json.errors.name.message}`);
+          }
+          setTimeout(function () {
+            window.location.href = '/conversation/?uid='+json.id;
+          },50);
+        }).catch(function (error) {
+          alert(error.message)
+        })
+      }
+

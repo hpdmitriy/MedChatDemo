@@ -1,0 +1,10 @@
+.content {
+  background: #eee;
+  padding: 10px 20px;
+}
+
+.footer {
+  margin-top: 20px;
+  border-top: 1px solid black;
+  padding-top: 15px;
+}

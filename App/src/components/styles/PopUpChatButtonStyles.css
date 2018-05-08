@@ -1,0 +1,33 @@
+.fade-enter {
+  opacity: 0.5;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+.fade-appear {
+  opacity: 0.5;
+}
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.5;
+  transition: opacity 1000ms ease-in;
+}
+#chatButton {
+  width: 100px;
+  height: 100px;
+  bottom: 65px;
+  right: 45px;
+}
+.popup-chat .pc-conversation {
+  min-height: 100px;
+}

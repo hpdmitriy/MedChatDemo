@@ -1,0 +1,8 @@
+.idea
+
+*/build
+package-lock.json
+*/package-lock.json
+/App/node_modules/
+/node_modules/
+/uploads
